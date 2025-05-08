@@ -1,8 +1,7 @@
 package com.guia1.security.service;
 
 import javax.crypto.Cipher;
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
+import java.security.*;
 import java.util.Base64;
 
 public class RsaEncryptionService {

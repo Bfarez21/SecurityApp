@@ -12,7 +12,7 @@ public class UrlFilter implements Filter {
 
     @Override
     public void init(jakarta.servlet.FilterConfig filterConfig) throws ServletException {
-        Filter.super.init(filterConfig);
+
     }
     //@Override
     //public void init(FilterConfig filterConfig) {}

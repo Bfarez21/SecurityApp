@@ -2,10 +2,7 @@ package com.guia1.security.controller;
 
 import com.guia1.security.service.AesEncryptionService;
 import com.guia1.security.service.RsaEncryptionService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/crypto")
@@ -17,13 +14,13 @@ public class CryptoController {
         this.aesService = new AesEncryptionService();
         this.rsaService = new RsaEncryptionService();
     }
-
+    //encriptar con AES
     @PostMapping("/aes/encrypt")
     public String encryptAes(@RequestBody String input) throws
             Exception {
         return aesService.encrypt(input);
     }
-
+    //Decencriptar con AES
     @PostMapping("/aes/decrypt")
     public String decryptAes(@RequestBody String input) throws
             Exception {
